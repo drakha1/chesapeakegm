@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250 150">
+  <defs>
+    <linearGradient id="stoneGold" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#E4CB93"/>
+      <stop offset="45%" stop-color="#BF9D62"/>
+      <stop offset="100%" stop-color="#7A5F35"/>
+    </linearGradient>
+    <linearGradient id="veinGold" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#F2E2B8" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#F2E2B8" stop-opacity=".55"/>
+      <stop offset="100%" stop-color="#F2E2B8" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="depth" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="2" stdDeviation="1.5" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+    <clipPath id="letterClip">
+      <text x="125" y="98" text-anchor="middle"
+            font-family="'DM Serif Display', Georgia, 'Times New Roman', serif"
+            font-size="96" font-weight="bold" letter-spacing="-6">CGM</text>
+    </clipPath>
+  </defs>
+
+  <g filter="url(#depth)">
+    <text x="125" y="98" text-anchor="middle"
+          font-family="'DM Serif Display', Georgia, 'Times New Roman', serif"
+          font-size="96" font-weight="bold" fill="url(#stoneGold)" letter-spacing="-6">CGM</text>
+  </g>
+
+  <g clip-path="url(#letterClip)" opacity="0.8">
+    <path d="M 5 55 C 65 45, 105 68, 155 50 S 225 40, 255 60" stroke="url(#veinGold)" stroke-width="2.5" fill="none"/>
+    <path d="M 5 80 C 75 90, 115 65, 165 85 S 215 100, 255 82" stroke="url(#veinGold)" stroke-width="1.5" fill="none"/>
+  </g>
+
+  <line x1="85" y1="128" x2="165" y2="128" stroke="#A8874A" stroke-width="1"/>
+</svg>
