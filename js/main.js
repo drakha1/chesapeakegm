@@ -15,4 +15,37 @@ document.addEventListener('DOMContentLoaded', () => {
             hamburger.classList.remove('active');
         });
     });
+
+    const contactForm = document.querySelector('.contact-form-card');
+    const formSuccess = document.getElementById('formSuccess');
+
+    if (contactForm && formSuccess) {
+        contactForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const submitBtn = contactForm.querySelector('button[type="submit"]');
+            const originalText = submitBtn.textContent;
+            submitBtn.textContent = 'Sending...';
+            submitBtn.disabled = true;
+
+            const ajaxAction = contactForm.action.replace('formsubmit.co/', 'formsubmit.co/ajax/');
+
+            try {
+                const response = await fetch(ajaxAction, {
+                    method: 'POST',
+                    body: new FormData(contactForm),
+                    headers: { 'Accept': 'application/json' }
+                });
+
+                if (!response.ok) throw new Error('Submission failed');
+
+                contactForm.hidden = true;
+                formSuccess.hidden = false;
+            } catch (err) {
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+                alert('Something went wrong sending your message. Please try again or call us directly.');
+            }
+        });
+    }
 });
