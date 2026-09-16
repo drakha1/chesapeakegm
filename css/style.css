@@ -585,6 +585,35 @@ nav {
     display: none;
 }
 
+/* ── SUPPLIERS PAGE HERO ─────────────────────────────── */
+.suppliers-hero {
+    background: var(--obsidian);
+    padding: 100px 6vw 70px;
+    text-align: center;
+}
+
+.suppliers-hero-content {
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+.suppliers-hero .section-tag {
+    color: var(--gold);
+}
+
+.suppliers-hero .hero-h1 {
+    margin: 14px 0 18px;
+}
+
+.suppliers-hero .hero-sub {
+    max-width: 480px;
+    margin: 0 auto;
+}
+
+.suppliers-main {
+    background: var(--white);
+}
+
 /* ── CONTACT ─────────────────────────────────────────── */
 #contact {
     background: var(--light);
