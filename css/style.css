@@ -613,6 +613,7 @@ nav {
 .map-box {
     background: var(--carbon);
     border-radius: 8px;
+    overflow: hidden;
     flex: 1;
     min-height: 220px;
     display: flex;
