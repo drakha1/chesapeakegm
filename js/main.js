@@ -38,7 +38,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 if (!response.ok) throw new Error('Submission failed');
 
-                submitBtn.textContent = 'Message Sent!';
+                submitBtn.textContent = '✓ Message Sent!';
+                submitBtn.classList.add('btn-sent');
             } catch (err) {
                 submitBtn.textContent = originalText;
                 submitBtn.disabled = false;

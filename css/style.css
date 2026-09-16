@@ -734,6 +734,13 @@ nav {
     background: var(--carbon);
 }
 
+.btn-dark.btn-sent,
+.btn-dark.btn-sent:hover {
+    background: var(--gold);
+    color: var(--obsidian);
+    cursor: default;
+}
+
 /* ── FOOTER ──────────────────────────────────────────── */
 footer {
     background: var(--ink);
