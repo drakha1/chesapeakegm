@@ -17,9 +17,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     const contactForm = document.querySelector('.contact-form-card');
-    const formSuccess = document.getElementById('formSuccess');
 
-    if (contactForm && formSuccess) {
+    if (contactForm) {
         contactForm.addEventListener('submit', async (e) => {
             e.preventDefault();
 
@@ -39,8 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 if (!response.ok) throw new Error('Submission failed');
 
-                contactForm.hidden = true;
-                formSuccess.hidden = false;
+                submitBtn.textContent = 'Message Sent!';
             } catch (err) {
                 submitBtn.textContent = originalText;
                 submitBtn.disabled = false;
